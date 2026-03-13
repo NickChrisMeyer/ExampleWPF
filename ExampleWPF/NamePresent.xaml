@@ -28,36 +28,59 @@
         </Label>
 
         <ListBox x:Name="lstReceivedNames" Grid.Row="1" />
+        <!--#region Deathly Hallows-->
 
         <Ellipse
             Grid.Row="1"
             Grid.Column="1"
             Width="100"
             Height="100"
-            Margin="20,20,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Panel.ZIndex="1"
+            Fill="PaleGoldenrod"
             Stroke="Black" />
+        <Line
+            Grid.Row="1"
+            Grid.Column="1"
+            HorizontalAlignment="Center"
+            Panel.ZIndex="2"
+            Stroke="Red"
+            StrokeThickness="1"
+            Y1="48"
+            Y2="188" />
         <Rectangle
             Grid.Row="1"
             Grid.Column="1"
             Width="100"
             Height="100"
-            Margin="20,130,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Stroke="Black" />
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Fill="CadetBlue"
+            RenderTransformOrigin="0.5,0.5"
+            Stroke="Black">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform />
+                    <SkewTransform />
+                    <RotateTransform Angle="45" />
+                    <TranslateTransform />
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <!--#endregion-->
 
-        <!--
+        <!--  HOW TO MAKE A COMMENT IN XAML  -->
+
         <Canvas
-    Name="DrawCanvas"
-    Grid.Row="1"
-    Grid.Column="1"
-    Background="Transparent"
-    MouseLeftButtonDown="DrawCanvas_MouseDown"
-    MouseLeftButtonUp="DrawCanvas_MouseUp"
-    MouseMove="DrawCanvas_MouseMove" />
-        -->
+            Name="DrawCanvas"
+            Grid.Row="1"
+            Grid.Column="1"
+            Background="Transparent"
+            MouseLeftButtonDown="DrawCanvas_MouseDown"
+            MouseLeftButtonUp="DrawCanvas_MouseUp"
+            MouseMove="DrawCanvas_MouseMove" />
+
 
     </Grid>
 </Window>
